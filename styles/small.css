@@ -1,0 +1,112 @@
+:root {
+    --bg-color: #f7fdf9;
+    --text-color: #1a1a1a;
+    --primary-color: #2e7d32;
+    --secondary-color: #a5d6a7;
+    --header-footer-bg: #004d40;
+    --hover-color: #00796b;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--header-footer-bg);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.course-card {
+    border: 1px solid var(--primary-color);
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.course-card.completed {
+    background-color: var(--secondary-color);
+}
+
+.filterButtons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.filterButtons button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filterButtons button:hover {
+    background-color: var(--hover-color);
+}
+
+footer {
+    background-color: var(--header-footer-bg);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #a5d6a7;
+    outline: none;
+}

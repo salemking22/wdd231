@@ -11,22 +11,46 @@ document.addEventListener("DOMContentLoaded", () => {
             displayMembers(members);
         } catch (err) {
             console.error("Fetch error:", err);
-            directory.innerHTML = "<p>Failed to load members.</p>";
+            directory.innerHTML = "<p>Failed to load members. Please try again later.</p>";
         }
     }
 
     function displayMembers(members) {
         directory.innerHTML = "";
+
         members.forEach((member) => {
             const card = document.createElement("div");
             card.classList.add("card");
-            card.innerHTML = `
-        <h3>${member.name}</h3>
-        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" />
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-      `;
+
+            const name = document.createElement("h3");
+            name.textContent = member.name;
+
+            const img = document.createElement("img");
+            img.setAttribute("src", `images/${member.image}`);
+            img.setAttribute("alt", `${member.name} Logo`);
+            img.setAttribute("width", "200");
+            img.setAttribute("height", "200");
+            img.setAttribute("loading", "lazy");
+            img.classList.add("member-img");
+
+            const address = document.createElement("p");
+            address.textContent = member.address;
+
+            const phone = document.createElement("p");
+            phone.textContent = member.phone;
+
+            const website = document.createElement("a");
+            website.setAttribute("href", member.website);
+            website.setAttribute("target", "_blank");
+            website.setAttribute("rel", "noopener noreferrer");
+            website.textContent = "Visit Website";
+
+            card.appendChild(name);
+            card.appendChild(img);
+            card.appendChild(address);
+            card.appendChild(phone);
+            card.appendChild(website);
+
             directory.appendChild(card);
         });
     }
@@ -42,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
+
     document.getElementById("lastModified").textContent = `Last modified: ${document.lastModified}`;
 
     getMembers();

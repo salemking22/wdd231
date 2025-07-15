@@ -4,7 +4,7 @@
         "address": "12 First Street, Harare",
         "phone": "+263 778 123 456",
         "website": "https://zimcoffee.co.zw",
-        "image": "zimcoffee.png",
+        "image": "zimcoffee.webp",
         "membership": "gold"
     },
     {
@@ -12,7 +12,7 @@
         "address": "456 Kwame Rd, Harare",
         "phone": "+263 712 456 789",
         "website": "https://techzw.com",
-        "image": "techinnovators.png",
+        "image": "techinnovators.webp",
         "membership": "silver"
     },
     {
@@ -20,7 +20,7 @@
         "address": "789 Renewable Ave, Harare",
         "phone": "+263 775 555 123",
         "website": "https://greenenergyzw.com",
-        "image": "greenenergy.png",
+        "image": "greenenergy.webp",
         "membership": "member"
     },
     {
@@ -28,7 +28,7 @@
         "address": "101 Fabric Street, Harare",
         "phone": "+263 778 999 888",
         "website": "https://hararetextile.co.zw",
-        "image": "hararetextile.png",
+        "image": "hararetextile.webp",
         "membership": "gold"
     },
     {
@@ -36,7 +36,7 @@
         "address": "202 Transit Road, Harare",
         "phone": "+263 773 444 555",
         "website": "https://safetransport.co.zw",
-        "image": "safetransport.png",
+        "image": "safetransport.webp",
         "membership": "silver"
     },
     {
@@ -44,7 +44,7 @@
         "address": "303 Market Lane, Harare",
         "phone": "+263 774 666 777",
         "website": "https://freshfoodszw.com",
-        "image": "freshfoods.png",
+        "image": "freshfoods.webp",
         "membership": "member"
     },
     {
@@ -52,7 +52,7 @@
         "address": "404 Vision Blvd, Harare",
         "phone": "+263 779 333 222",
         "website": "https://brightfuture.co.zw",
-        "image": "brightfuture.png",
+        "image": "brightfuture.webp",
         "membership": "gold"
     }
 ]

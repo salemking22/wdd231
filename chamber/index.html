@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Harare Chamber of Commerce - Home Page">
+  <meta name="author" content="Cynthia Moyo">
+  <meta property="og:title" content="Harare Chamber of Commerce Home">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://salemking22.github.io/wdd231/chamber/index.html">
+  <meta property="og:image" content="images/hero.webp">
+  <title>Harare Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/chamber-home.css">
+</head>
+
+<body>
+  <header>
+    <h1>Harare Chamber of Commerce</h1>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-label="Hero section">
+      <img src="images/hero.webp" alt="View of Harare city skyline" class="hero-image" loading="lazy">
+      <div class="hero-text">
+        <h2>Welcome to the Heart of Business in Harare!</h2>
+        <p>Your source for commerce, connection, and community.</p>
+        <p><a href="join.html" class="call-to-action">Join the Chamber</a></p>
+      </div>
+    </section>
+
+    <section class="current-events" aria-label="Current events">
+      <h2>Current Events</h2>
+      <ul>
+        <li>July 25: Business Networking Breakfast at City Hall</li>
+        <li>August 10: Annual Chamber Gala</li>
+        <li>September 5: Small Business Workshop</li>
+      </ul>
+    </section>
+
+    <section class="weather" aria-label="Current weather in Harare">
+      <h2>Current Weather in Harare</h2>
+      <p><strong>Temperature:</strong> <span id="temperature">--</span>°C</p>
+      <p><strong>Conditions:</strong> <span id="condition">--</span></p>
+      <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+      <p><strong>Wind:</strong> <span id="wind">--</span> km/h</p>
+    </section>
+
+    <section class="forecast-section" aria-label="3-day weather forecast">
+      <h2>3-Day Forecast</h2>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <section class="spotlight">
+      <h2>Member Spotlights</h2>
+      <div id="spotlightContainer" class="spotlight-container"></div>
+    </section>
+
+    <section class="spotlights-section" aria-label="Discover Harare">
+      <h2>Discover Harare</h2>
+      <div class="spotlights">
+        <div class="spotlight-card">
+          <img src="images/mbare-market.webp" alt="Mbare Musika Market" loading="lazy" />
+          <h3>Mbare Musika Market</h3>
+          <p>A bustling local market full of fresh produce and handmade crafts.</p>
+        </div>
+        <div class="spotlight-card">
+          <img src="images/harare-gardens.webp" alt="Harare Gardens" loading="lazy" />
+          <h3>Harare Gardens</h3>
+          <p>The city's largest public park, ideal for walks and picnics.</p>
+        </div>
+        <div class="spotlight-card">
+          <img src="images/national-gallery.webp" alt="National Gallery" loading="lazy" />
+          <h3>National Gallery</h3>
+          <p>Explore Zimbabwean art and culture at this national treasure.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Cynthia Moyo | Zimbabwe</p>
+    <p id="lastModified"></p>
+    <div class="social-links">
+      <a href="https://github.com/salemking22" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/cynthia-moyo-374045276?trk=contact-info" target="_blank"
+        rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="scripts/home.js" defer></script>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+  </script>
+</body>
+
+</html>

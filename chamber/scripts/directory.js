@@ -23,7 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.add("card");
 
             const name = document.createElement("h3");
-            name.textContent = member.name;
+
+            if (member.name === "Tech Innovators") {
+                // Tech Innovators: name as plain text, website link on a new line
+                name.textContent = member.name;
+                card.appendChild(name);
+
+                const website = document.createElement("a");
+                website.setAttribute("href", member.website);
+                website.setAttribute("target", "_blank");
+                website.setAttribute("rel", "noopener noreferrer");
+                website.textContent = "Visit Website";
+                card.appendChild(website);
+            } else {
+                // Other members: name as a clickable link
+                name.innerHTML = `<a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.name}</a>`;
+                card.appendChild(name);
+            }
 
             const img = document.createElement("img");
             img.setAttribute("src", `images/${member.image}`);
@@ -39,17 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const phone = document.createElement("p");
             phone.textContent = member.phone;
 
-            const website = document.createElement("a");
-            website.setAttribute("href", member.website);
-            website.setAttribute("target", "_blank");
-            website.setAttribute("rel", "noopener noreferrer");
-            website.textContent = "Visit Website";
-
-            card.appendChild(name);
             card.appendChild(img);
             card.appendChild(address);
             card.appendChild(phone);
-            card.appendChild(website);
 
             directory.appendChild(card);
         });

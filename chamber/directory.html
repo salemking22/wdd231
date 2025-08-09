@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Harare Chamber of Commerce - Member Directory</title>
+
+    <meta name="description"
+        content="Discover trusted businesses and members of the Harare Chamber of Commerce. Connect with local Harare companies, services, and opportunities.">
+    <meta name="author" content="Cynthia Moyo">
+
+    <meta property="og:title" content="Harare Chamber of Commerce - Member Directory">
+    <meta property="og:description" content="Find and connect with leading chamber members and businesses in Harare.">
+    <meta property="og:image" content="https://salemking22.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:url" content="https://salemking22.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Harare Chamber of Commerce - Member Directory">
+    <meta name="twitter:description" content="Find and connect with leading chamber members and businesses in Harare.">
+    <meta name="twitter:image" content="https://salemking22.github.io/wdd231/chamber/images/logo.svg">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Harare Chamber of Commerce",
+      "url": "https://salemking22.github.io/wdd231/chamber/directory.html",
+      "logo": "https://salemking22.github.io/wdd231/chamber/images/logo.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Harare",
+        "addressCountry": "ZW"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Harare Chamber of Commerce logo" width="120" height="120">
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="directory.html" aria-current="page">Directory</a>
+            <a href="#">Events</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Harare Chamber of Commerce - Member Directory</h1>
+        <h2>Member Directory</h2>
+
+        <section class="view-toggle" aria-label="View toggle buttons">
+            <button id="grid-view" aria-pressed="true">Grid View</button>
+            <button id="list-view" aria-pressed="false">List View</button>
+        </section>
+
+        <section id="directory" class="grid" aria-live="polite"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Cynthia Moyo | WDD 231 | Zimbabwe</p>
+        <p id="lastModified"></p>
+        <div class="social-links">
+            <a href="https://github.com/salemking22" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/cynthia-moyo-374045276?trk=contact-info" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+
+</html>

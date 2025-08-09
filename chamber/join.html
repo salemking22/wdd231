@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chamber Membership Join</title>
+    <meta name="description"
+        content="Join the Harare Chamber of Commerce to access business resources, networking, and growth opportunities.">
+    <!-- Updated links to CSS and JS in styles/ and scripts/ -->
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Harare Chamber of Commerce logo" width="120" height="120">
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="chamber-home.html">Chamber Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" aria-current="page">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Membership Application Form</h2>
+
+        <form method="get" action="thankyou.html" id="membershipForm">
+            <label>
+                First Name:
+                <input type="text" name="firstName" title="Applicant's first name" required autocomplete="given-name">
+            </label>
+
+            <label>
+                Last Name:
+                <input type="text" name="lastName" title="Applicant's last name" required autocomplete="family-name">
+            </label>
+
+            <label>
+                Organizational Title:
+                <input type="text" name="orgTitle" title="Applicant's organizational title"
+                    autocomplete="organization-title" pattern="^[A-Za-z\s\-]{7,}$" required">
+            </label>
+
+            <label>
+                Email Address:
+                <input type="email" name="email" title="Applicant's email address" required autocomplete="email"
+                    placeholder="example@example.com">
+            </label>
+
+            <label>
+                Mobile Phone Number:
+                <input type="tel" name="mobile" title="Applicant's mobile phone number" required autocomplete="tel">
+            </label>
+
+            <label>
+                Business/Organization Name:
+                <input type="text" name="businessName" title="Business or organization's name" required
+                    autocomplete="organization">
+            </label>
+
+            <label>
+                Business/Organization Description:
+                <textarea name="businessDesc" title="Brief description of your business" rows="4"></textarea>
+            </label>
+
+            <fieldset>
+                <legend>Membership Level (required):</legend>
+                <label><input type="radio" name="membershipLevel" value="np" required /> NP Membership (Non-Profit, no
+                    fee)</label>
+                <label><input type="radio" name="membershipLevel" value="bronze" /> Bronze Membership</label>
+                <label><input type="radio" name="membershipLevel" value="silver" /> Silver Membership</label>
+                <label><input type="radio" name="membershipLevel" value="gold" /> Gold Membership</label>
+            </fieldset>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <!-- Membership Cards -->
+        <section class="membership-cards" aria-label="Membership level information">
+            <article class="card" tabindex="0">
+                <h3>NP Membership</h3>
+                <p>Non-profit organizations — no fee.</p>
+                <button class="open-modal" data-modal="modal-np">More Info</button>
+            </article>
+
+            <article class="card" tabindex="0">
+                <h3>Bronze Membership</h3>
+                <p>Basic membership with some benefits.</p>
+                <button class="open-modal" data-modal="modal-bronze">More Info</button>
+            </article>
+
+            <article class="card" tabindex="0">
+                <h3>Silver Membership</h3>
+                <p>Enhanced benefits including advertising.</p>
+                <button class="open-modal" data-modal="modal-silver">More Info</button>
+            </article>
+
+            <article class="card" tabindex="0">
+                <h3>Gold Membership</h3>
+                <p>All benefits plus premium event discounts.</p>
+                <button class="open-modal" data-modal="modal-gold">More Info</button>
+            </article>
+        </section>
+
+        <!-- Modals -->
+        <div id="modal-np" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-np-title" hidden>
+            <div class="modal-content">
+                <h3 id="modal-np-title">NP Membership Benefits</h3>
+                <p>Non-profit organizations enjoy free membership with access to community events and networking.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+
+        <div id="modal-bronze" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title"
+            hidden>
+            <div class="modal-content">
+                <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+                <p>Basic membership benefits include invitations to workshops and advertising in monthly newsletters.
+                </p>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+
+        <div id="modal-silver" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title"
+            hidden>
+            <div class="modal-content">
+                <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+                <p>Includes Bronze benefits plus spotlight advertising on the website and discounted event tickets.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+
+        <div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" hidden>
+            <div class="modal-content">
+                <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+                <p>All Silver benefits plus VIP access to events, exclusive training sessions, and premium advertising
+                    spots.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Cynthia Moyo | WDD 231 | Zimbabwe</p>
+        <p id="lastModified"></p>
+        <div class="social-links">
+            <a href="https://github.com/salemking22" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/cynthia-moyo-374045276?trk=contact-info" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Set last modified date and time in footer
+        const lastModified = new Date(document.lastModified);
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        };
+        document.getElementById('lastModified').textContent = lastModified.toLocaleString(undefined, options);
+    </script>
+</body>
+
+</html>
+<!-- Commit attribution test -->

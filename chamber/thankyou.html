@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You - Harare Chamber of Commerce</title>
+    <meta name="description" content="Thank you for joining the Harare Chamber of Commerce.">
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Harare Chamber of Commerce logo" width="120" height="120">
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="chamber-home.html">Chamber Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Thank You for Joining!</h2>
+        <p id="thankYouMessage"></p>
+
+        <section>
+            <h3>Your Submitted Details:</h3>
+            <ul>
+                <li><strong>First Name:</strong> <span id="firstName"></span></li>
+                <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+                <li><strong>Organizational Title:</strong> <span id="orgTitle"></span></li>
+                <li><strong>Email Address:</strong> <span id="email"></span></li>
+                <li><strong>Mobile Phone Number:</strong> <span id="mobile"></span></li>
+                <li><strong>Business/Organization Name:</strong> <span id="businessName"></span></li>
+                <li><strong>Membership Level:</strong> <span id="membershipLevel"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Cynthia Moyo | WDD 231 | Zimbabwe</p>
+        <p id="lastModified"></p>
+        <div class="social-links">
+            <a href="https://github.com/salemking22" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/cynthia-moyo-374045276?trk=contact-info" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Helper function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param) || 'Not provided';
+        }
+
+        // Map membership level codes to readable names
+        const membershipMap = {
+            np: 'NP Membership (Non-Profit)',
+            bronze: 'Bronze Membership',
+            silver: 'Silver Membership',
+            gold: 'Gold Membership'
+        };
+
+        // Populate the page with submitted form data
+        document.getElementById('firstName').textContent = getQueryParam('firstName');
+        document.getElementById('lastName').textContent = getQueryParam('lastName');
+        document.getElementById('orgTitle').textContent = getQueryParam('orgTitle');
+        document.getElementById('email').textContent = getQueryParam('email');
+        document.getElementById('mobile').textContent = getQueryParam('mobile');
+        document.getElementById('businessName').textContent = getQueryParam('businessName');
+
+        const rawMembership = getQueryParam('membershipLevel');
+        document.getElementById('membershipLevel').textContent = membershipMap[rawMembership] || 'Unknown';
+
+        // Thank you message
+        const firstName = getQueryParam('firstName');
+        document.getElementById('thankYouMessage').textContent = `Thank you, ${firstName}, for applying to join the Harare Chamber of Commerce. We will contact you soon!`;
+
+        // Footer year and last modified
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const lastModified = new Date(document.lastModified);
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        };
+        document.getElementById('lastModified').textContent = lastModified.toLocaleString(undefined, options);
+    </script>
+</body>
+
+</html>

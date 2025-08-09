@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chamber Membership Join</title>
     <meta name="description"
-        content="Join the Harare Chamber of Commerce to access business resources, networking, and growth opportunities." />
+        content="Join the Harare Chamber of Commerce to access business resources, networking, and growth opportunities.">
     <!-- Updated links to CSS and JS in styles/ and scripts/ -->
-    <link rel="stylesheet" href="chamber/styles/join.css" />
+    <link rel="stylesheet" href="styles/join.css">
     <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="images/logo.svg" alt="Harare Chamber of Commerce logo" width="120" height="120" />
+        <img src="images/logo.svg" alt="Harare Chamber of Commerce logo" width="120" height="120">
         <nav>
             <a href="../index.html">Home</a>
             <a href="chamber-home.html">Chamber Home</a>
@@ -29,35 +29,35 @@
         <form method="get" action="thankyou.html" id="membershipForm">
             <label>
                 First Name:
-                <input type="text" name="firstName" title="Applicant's first name" required autocomplete="given-name" />
+                <input type="text" name="firstName" title="Applicant's first name" required autocomplete="given-name">
             </label>
 
             <label>
                 Last Name:
-                <input type="text" name="lastName" title="Applicant's last name" required autocomplete="family-name" />
+                <input type="text" name="lastName" title="Applicant's last name" required autocomplete="family-name">
             </label>
 
             <label>
                 Organizational Title:
                 <input type="text" name="orgTitle" title="Applicant's organizational title"
-                    autocomplete="organization-title" pattern="^[A-Za-z\s\-]{7,}$" required />
+                    autocomplete="organization-title" pattern="^[A-Za-z\s\-]{7,}$" required">
             </label>
 
             <label>
                 Email Address:
                 <input type="email" name="email" title="Applicant's email address" required autocomplete="email"
-                    placeholder="example@example.com" />
+                    placeholder="example@example.com">
             </label>
 
             <label>
                 Mobile Phone Number:
-                <input type="tel" name="mobile" title="Applicant's mobile phone number" required autocomplete="tel" />
+                <input type="tel" name="mobile" title="Applicant's mobile phone number" required autocomplete="tel">
             </label>
 
             <label>
                 Business/Organization Name:
                 <input type="text" name="businessName" title="Business or organization's name" required
-                    autocomplete="organization" />
+                    autocomplete="organization">
             </label>
 
             <label>
@@ -74,7 +74,7 @@
                 <label><input type="radio" name="membershipLevel" value="gold" /> Gold Membership</label>
             </fieldset>
 
-            <input type="hidden" name="timestamp" id="timestamp" />
+            <input type="hidden" name="timestamp" id="timestamp">
 
             <button type="submit">Submit Application</button>
         </form>

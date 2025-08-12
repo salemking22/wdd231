@@ -1,0 +1,58 @@
+/* siteplan.css */
+
+/* Apply your chosen colors */
+body {
+    font-family: Arial, sans-serif;
+    /* Example font, update with your font choice */
+    background-color: #f0f8ff;
+    /* light blue background, change to your chosen background color */
+    color: #333;
+    /* dark text for readability */
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Headings using your color and font */
+h1,
+h2,
+h3 {
+    color: #2c6f4e;
+    /* example green color for headings */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* example font */
+    margin-top: 1.5em;
+}
+
+/* Paragraph text */
+p {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+/* Site plan sections */
+section {
+    margin-bottom: 2em;
+    padding: 10px;
+    background-color: #e0f2f1;
+    /* light teal background for sections */
+    border-radius: 6px;
+}
+
+/* Wireframe images or sketches */
+.wireframe-img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #999;
+    margin-top: 1em;
+    display: block;
+}
+
+/* Use your accent color for links */
+a {
+    color: #2c6f4e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

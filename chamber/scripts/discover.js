@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const galleryContainer = document.getElementById("gallery-container");
     const visitMessage = document.getElementById("visit-message-text");
 
-    // Fetch the interest.json data
+    // Fetch the JSON data
     fetch('data/interest.json')
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -15,10 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 const card = document.createElement('section');
                 card.className = 'gallery-card';
 
+                // Make sure image path is exactly as in JSON
                 card.innerHTML = `
                     <h3>${item.name}</h3>
                     <figure>
-                        <img src="${item.image}" alt="${item.alt}" width="400" height="180" loading="lazy" />
+                        <img src="${item.image}" 
+                             alt="${item.alt}" 
+                             width="${item.width}" 
+                             height="${item.height}" 
+                             loading="lazy" />
                     </figure>
                     <address>${item.address}</address>
                     <p>${item.description}</p>
@@ -48,22 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("lastVisit", now);
 
-    // Footer year
+    // Footer year and last modified
     const yearElem = document.getElementById("year");
     if (yearElem) yearElem.textContent = new Date().getFullYear();
 
-    // Footer last modified date and time
     const lastModElem = document.getElementById("lastModified");
-    if (lastModElem) {
-        const lastModified = new Date(document.lastModified);
-        const options = {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit'
-        };
-        lastModElem.textContent = `Last Modified: ${lastModified.toLocaleString('en-ZW', options)}`;
-    }
+    if (lastModElem) lastModElem.textContent = `Last Modified: ${new Date(document.lastModified).toLocaleDateString()}`;
 });
+

@@ -3,48 +3,48 @@
         "name": "National Botanic Gardens",
         "address": "Fifth Street Extension, Harare, Zimbabwe",
         "description": "A serene garden with diverse indigenous and exotic plants, perfect for relaxation and photography.",
-        "image": "botanicgardens.webp"
+        "image": "images/botanicgardens.webp"
     },
     {
         "name": "Mukuvisi Woodlands",
         "address": "Hillside Road, Harare, Zimbabwe",
         "description": "A nature reserve home to zebras, giraffes, and antelopes, offering walking and cycling trails.",
-        "image": "mukuvisi.webp"
+        "image": "images/mukuvisi.webp"
     },
     {
         "name": "Lake Chivero Recreational Park",
         "address": "Mashonaland West, Zimbabwe",
         "description": "A popular spot for boating, fishing, and picnicking, surrounded by scenic landscapes and wildlife.",
-        "image": "lakechivero.webp"
+        "image": "images/lakechivero.webp"
     },
     {
         "name": "Kuimba Shiri Bird Sanctuary",
         "address": "Lake Chivero, Zimbabwe",
         "description": "A haven for bird lovers, showcasing over 460 species of birds native to Zimbabwe.",
-        "image": "kuimbashiri.webp"
+        "image": "images/kuimbashiri.webp"
     },
     {
         "name": "Harare Gardens",
         "address": "Julius Nyerere Way, Harare, Zimbabwe",
         "description": "The largest public park in Harare, ideal for family outings and open-air events.",
-        "image": "hararegarden.webp"
+        "image": "images/hararegarden.webp"
     },
     {
         "name": "National Gallery of Zimbabwe",
         "address": "Main Street, Harare, Zimbabwe",
         "description": "An art museum featuring contemporary and traditional works by Zimbabwean artists.",
-        "image": "nationalgallery.webp"
+        "image": "images/nationalgallery.webp"
     },
     {
         "name": "Ngomakurira Rock Paintings",
         "address": "Domboshava, Mashonaland East, Zimbabwe",
         "description": "Ancient rock art site with panoramic views, offering a glimpse into Zimbabwe's history.",
-        "image": "ngomakurira.webp"
+        "image": "images/ngomakurira.webp"
     },
     {
         "name": "Matobo Hills National Park",
         "address": "Matabeleland South, Zimbabwe",
         "description": "A UNESCO World Heritage site known for its unique rock formations and cultural heritage.",
-        "image": "matobohills.webp"
+        "image": "images/matobohills.webp"
     }
 ]

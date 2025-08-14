@@ -24,7 +24,7 @@ const container = document.querySelector('.grid-container');
 fetch('data/interest.json')
     .then(response => response.json())
     .then(data => {
-        data.forEach((item, index) => {
+        data.forEach(item => {
             // Create card
             const card = document.createElement('div');
             card.classList.add('interest-card');
@@ -37,7 +37,7 @@ fetch('data/interest.json')
             // Image
             const figure = document.createElement('figure');
             const img = document.createElement('img');
-            img.src = `images/${item.image}`;
+            img.src = item.image; // FIXED: use JSON path directly
             img.alt = item.name;
             img.loading = 'lazy';
             figure.appendChild(img);
@@ -64,5 +64,6 @@ fetch('data/interest.json')
     })
     .catch(error => console.error('Error loading interest.json:', error));
 
+// Footer dates
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last modified: ${document.lastModified}`;

@@ -4,54 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discover Harare - Harare Chamber of Commerce</title>
+
     <meta name="description"
-        content="Discover the wildlife, nature, and attractions of Harare with the Harare Chamber of Commerce.">
-    <title>Discover | Harare Chamber of Commerce</title>
+        content="Discover Harare - Explore local attractions, history, and culture with the Harare Chamber of Commerce.">
+    <meta name="author" content="Cynthia Moyo">
+
+    <meta property="og:title" content="Discover Harare - Harare Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salemking22.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="https://salemking22.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:description"
+        content="Learn about Harare's attractions, demographics, and features that make it a great place to live and do business.">
+
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Directory CSS for header/footer -->
+    <link rel="stylesheet" href="styles/directory.css">
+    <!-- Discover-specific CSS -->
     <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/discover.js" defer></script>
 </head>
 
 <body>
+    <!-- HEADER copied from Directory page -->
     <header>
         <img src="images/logo.svg" alt="Harare Chamber of Commerce logo" width="120" height="120">
         <nav>
-            <a href="index.html">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="discover.html" aria-current="page">Discover</a>
-            <a href="join.html">Join</a>
-            <a href="contact.html">Contact</a>
+            <a href="../index.html">Home</a>
+            <a href="directory.html" aria-current="page">Directory</a>
+            <a href="#">Events</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
+
+    <!-- MAIN CONTENT -->
     <main>
-        <section class="hero">
-            <h1>Discover Harare's Wildlife & Nature</h1>
-            <p>From ancient trees to iconic wildlife, Harare offers a rich natural heritage waiting to be explored.</p>
-        </section>
+        <h1>Discover Harare</h1>
 
-        <section class="gallery" id="gallery" aria-live="polite" aria-label="Gallery of local attractions">
-            <!-- Cards will be dynamically loaded here by discover.js -->
-        </section>
+        <!-- Visitor message placeholder -->
+        <aside id="visit-message" aria-label="Visitor message"></aside>
 
-        <section class="visit-message" aria-live="polite" aria-atomic="true">
-            <h2>Your Visits</h2>
-            <p id="visit-message-text"></p>
+        <!-- Discover grid -->
+        <section class="grid-container" aria-label="Harare points of interest">
+            <!-- JS will inject the 8 interest cards here -->
         </section>
     </main>
 
+    <!-- FOOTER copied from Directory page -->
     <footer>
-        <p>&copy; <span id="year"></span> Harare Chamber of Commerce</p>
+        <p>&copy; <span id="year"></span> Cynthia Moyo | WDD 231 | Zimbabwe</p>
         <p id="lastModified"></p>
         <div class="social-links">
             <a href="https://github.com/salemking22" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/cynthia-moyo-374045276" target="_blank"
+            <a href="https://www.linkedin.com/in/cynthia-moyo-374045276?trk=contact-info" target="_blank"
                 rel="noopener noreferrer">LinkedIn</a>
         </div>
     </footer>
 
-    <script src="scripts/discover.js" defer></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = `Last Modified: ${new Date(document.lastModified).toLocaleDateString()}`;
+        document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
     </script>
 </body>
 

@@ -1,40 +1,68 @@
-// discover.js
+// Visitor message using localStorage
+const visitMessage = document.getElementById('visit-message');
+const lastVisit = localStorage.getItem('lastVisit');
+const now = Date.now();
 
-const galleryContainer = document.getElementById('gallery');
-
-fetch('https://salemking22.github.io/wdd231/chamber/interest.json')
-    .then(res => {
-        if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-    })
-    .then(data => {
-        displayGallery(data);
-    })
-    .catch(err => {
-        console.error('Fetch error:', err);
-        galleryContainer.innerHTML = `<p class="error">Failed to load gallery. Please try again later.</p>`;
-    });
-
-function displayGallery(locations) {
-    locations.forEach(location => {
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        card.innerHTML = `
-      <img src="${location.image}" 
-           alt="${location.alt}" 
-           width="${location.width}" 
-           height="${location.height}" 
-           loading="lazy">
-      <div class="card-content">
-        <h2>${location.name}</h2>
-        <p><strong>Address:</strong> ${location.address}</p>
-        <p>${location.description}</p>
-      </div>
-    `;
-
-        galleryContainer.appendChild(card);
-    });
+if (!lastVisit) {
+    visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    const diffDays = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+    if (diffDays < 1) {
+        visitMessage.textContent = "Back so soon! Awesome!";
+    } else if (diffDays === 1) {
+        visitMessage.textContent = "You last visited 1 day ago.";
+    } else {
+        visitMessage.textContent = `You last visited ${diffDays} days ago.`;
+    }
 }
+localStorage.setItem('lastVisit', now);
+
+// Get the container
+const container = document.querySelector('.grid-container');
+
+// Fetch the interest JSON
+fetch('data/interest.json')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach((item, index) => {
+            // Create card
+            const card = document.createElement('div');
+            card.classList.add('interest-card');
+
+            // Name
+            const h2 = document.createElement('h2');
+            h2.textContent = item.name;
+            card.appendChild(h2);
+
+            // Image
+            const figure = document.createElement('figure');
+            const img = document.createElement('img');
+            img.src = `images/${item.image}`;
+            img.alt = item.name;
+            img.loading = 'lazy';
+            figure.appendChild(img);
+            card.appendChild(figure);
+
+            // Address
+            const address = document.createElement('address');
+            address.textContent = item.address;
+            card.appendChild(address);
+
+            // Description
+            const p = document.createElement('p');
+            p.textContent = item.description;
+            card.appendChild(p);
+
+            // Button
+            const btn = document.createElement('button');
+            btn.textContent = 'Learn more';
+            card.appendChild(btn);
+
+            // Append card to container
+            container.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error loading interest.json:', error));
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = `Last modified: ${document.lastModified}`;

@@ -1,160 +1,61 @@
-/* ===== Overall page styling ===== */
-body {
-    font-family: Arial, sans-serif;
+/* ---------------- RESET & BASIC TYPOGRAPHY ---------------- */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-/* ===== Header styling ===== */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    /* optional, adds spacing below the title */
+}
+
+/* ---------------- HEADER (MATCH DIRECTORY) ---------------- */
 header {
-    background-color: #2a7a2a;
-    /* chamber green */
+    background-color: #004d40;
     color: white;
     padding: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    text-align: center;
 }
 
-header img {
-    display: block;
-    width: 120px;
-    height: 120px;
-}
-
-header nav {
-    display: flex;
-    gap: 1.5rem;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-header nav a {
+nav a {
     color: white;
     text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    margin: 0 1rem;
+    font-weight: bold;
 }
 
-header nav a[aria-current="page"],
-header nav a:hover {
+nav a[aria-current="page"] {
     text-decoration: underline;
-    background-color: rgba(255, 255, 255, 0.15);
+    cursor: default;
 }
 
-/* ===== Main content styling ===== */
-main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    outline: none;
 }
 
-/* ===== Hero section ===== */
-.hero {
-    background-color: #d9f2d9;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-/* ===== Gallery section ===== */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-bottom: 2rem;
-}
-
-/* Gallery cards */
-.gallery-card {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 400px;
-    /* prevent layout shift */
-}
-
-.gallery-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.gallery-card figure {
-    margin: 0;
-    flex-shrink: 0;
-}
-
-.gallery-card img {
-    width: 100%;
-    height: 200px;
-    /* fixed height */
-    object-fit: cover;
-    display: block;
-}
-
-.gallery-card figcaption {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-    background-color: #f9f9f9;
-    color: #444;
-    line-height: 1.4;
-    border-top: 1px solid #ddd;
-    flex-grow: 1;
-}
-
-.gallery-card h2 {
-    margin: 0.75rem;
-    font-size: 1.1rem;
-    color: #2a7a2a;
-}
-
-.gallery-card address,
-.gallery-card p {
-    margin: 0.5rem 0.75rem;
-}
-
-/* Learn More button */
-.gallery-card button {
-    margin: 0.75rem;
-    padding: 0.5rem 1rem;
-    background-color: #2a7a2a;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.gallery-card button:hover {
-    background-color: #1f5a1f;
-}
-
-/* ===== Visit message section ===== */
-.visit-message {
-    background-color: #e2f0e2;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 2rem;
-    text-align: center;
-    font-style: italic;
-}
-
-/* ===== Footer styling ===== */
+/* ---------------- FOOTER (MATCH DIRECTORY) ---------------- */
 footer {
-    background-color: #2a7a2a;
-    /* chamber green */
+    background-color: #004d40;
     color: white;
-    text-align: center;
     padding: 1rem;
-    margin-top: 3rem;
+    text-align: center;
     font-size: 0.9rem;
 }
 
@@ -163,13 +64,116 @@ footer .social-links {
 }
 
 footer .social-links a {
-    color: white;
     margin: 0 0.5rem;
+    color: white;
     text-decoration: none;
-    font-weight: 600;
-    transition: text-decoration 0.3s ease;
 }
 
 footer .social-links a:hover {
     text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* ---------------- VISITOR MESSAGE ---------------- */
+#visit-message {
+    background-color: #f0f8ff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: none;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* ---------------- GRID CONTAINER ---------------- */
+.grid-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* Individual interest card styling */
+.interest-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.interest-card h2 {
+    margin-top: 0;
+}
+
+.interest-card figure {
+    margin: 0;
+}
+
+.interest-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Hover effect for images on medium+ screens */
+@media (min-width: 641px) {
+    .interest-card img:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.interest-card address {
+    font-style: normal;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.interest-card button {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.interest-card button:hover {
+    background-color: #023e8a;
+}
+
+/* ---------------- RESPONSIVE GRID ---------------- */
+/* Medium screens: 2 columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+/* Large screens: 4 columns */
+@media (min-width: 1025px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
 }

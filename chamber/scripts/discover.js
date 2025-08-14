@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const card = document.createElement('section');
                 card.className = 'gallery-card';
 
-                // Make sure image path is exactly as in JSON
                 card.innerHTML = `
                     <h3>${item.name}</h3>
                     <figure>
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Fetch error:', err);
         });
 
-    // localStorage visit message
+    // Display last visit message
     const lastVisit = localStorage.getItem("lastVisit");
     const now = Date.now();
 
@@ -60,4 +59,3 @@ document.addEventListener("DOMContentLoaded", () => {
     const lastModElem = document.getElementById("lastModified");
     if (lastModElem) lastModElem.textContent = `Last Modified: ${new Date(document.lastModified).toLocaleDateString()}`;
 });
-

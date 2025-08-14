@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const galleryContainer = document.getElementById("gallery-container");
     const visitMessage = document.getElementById("visit-message-text");
 
-    // ✅ Updated fetch path — now looks in chamber/ folder
-    fetch('interest.json')
+    // ✅ Corrected fetch path — interest.json is in chamber/, discover.js is in chamber/scripts/
+    fetch('../interest.json')
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
                              width="${item.width}" 
                              height="${item.height}" 
                              loading="lazy" />
+                        <figcaption>${item.description}</figcaption>
                     </figure>
                     <address>${item.address}</address>
-                    <p>${item.description}</p>
                     <button type="button" aria-label="Learn more about ${item.name}">Learn More</button>
                 `;
 

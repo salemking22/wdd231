@@ -28,7 +28,7 @@
             <p>From ancient trees to iconic wildlife, Harare offers a rich natural heritage waiting to be explored.</p>
         </section>
 
-        <section class="gallery" id="gallery-container" aria-live="polite" aria-label="Gallery of local attractions">
+        <section class="gallery" id="gallery" aria-live="polite" aria-label="Gallery of local attractions">
             <!-- Cards will be dynamically loaded here by discover.js -->
         </section>
 
@@ -48,7 +48,7 @@
         </div>
     </footer>
 
-    <script src="scripts/discover.js"></script>
+    <script src="scripts/discover.js" defer></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
         document.getElementById("lastModified").textContent = `Last Modified: ${new Date(document.lastModified).toLocaleDateString()}`;

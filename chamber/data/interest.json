@@ -1,74 +1,58 @@
 [
     {
         "name": "Mukuvisi Woodlands",
-        "address": "Ridgeview Rd, Harare",
-        "description": "A nature sanctuary protecting indigenous wildlife and flora, offering walking trails and birdwatching.",
-        "image": "images/mukuvisi_woodlands.webp",
-        "alt": "Mukuvisi Woodlands",
-        "width": 600,
-        "height": 400
+        "address": "Park Lane, Harare, Zimbabwe",
+        "phone": "+263 242 747 111",
+        "website": "https://www.mukuvisiwoodland.co.zw",
+        "image": "chamber/images/mukuvisi_woodlands.webp",
+        "membership": "gold"
     },
     {
-        "name": "Harare Botanical Gardens",
-        "address": "Cnr of Jason Moyo & Samora Machel Ave, Harare",
-        "description": "Beautiful botanical gardens with diverse plant species and picnic areas for families.",
-        "image": "images/botanical_gardens.webp",
-        "alt": "Harare Botanical Gardens",
-        "width": 600,
-        "height": 400
+        "name": "Hwange National Park",
+        "address": "Hwange, Zimbabwe",
+        "phone": "+263 281 232 736",
+        "website": "https://www.zimparks.org.zw",
+        "image": "chamber/images/hwange_national_park.webp",
+        "membership": "silver"
     },
     {
-        "name": "National Gallery of Zimbabwe",
-        "address": "Samora Machel Ave, Harare",
-        "description": "The premier art museum showcasing Zimbabwean contemporary and traditional artworks.",
-        "image": "images/national_gallery.webp",
-        "alt": "National Gallery of Zimbabwe",
-        "width": 600,
-        "height": 400
+        "name": "Matobo National Park",
+        "address": "Matobo, Zimbabwe",
+        "phone": "+263 292 231 142",
+        "website": "https://www.zimparks.org.zw",
+        "image": "chamber/images/matobo_national_park.webp",
+        "membership": "member"
     },
     {
-        "name": "Harare City Library",
-        "address": "1 Julius Nyerere Way, Harare",
-        "description": "Historic library with a vast collection of books and public resources.",
-        "image": "images/city_library.webp",
-        "alt": "Harare City Library",
-        "width": 600,
-        "height": 400
+        "name": "Victoria Falls",
+        "address": "Victoria Falls, Zimbabwe",
+        "phone": "+263 213 284 4753",
+        "website": "https://www.zimparks.org.zw",
+        "image": "chamber/images/victoria_falls.webp",
+        "membership": "gold"
     },
     {
-        "name": "Baobab Tree Park",
-        "address": "Mbare, Harare",
-        "description": "Home to ancient baobab trees, offering scenic views and cultural heritage significance.",
-        "image": "images/baobab_tree.webp",
-        "alt": "Baobab Tree Park",
-        "width": 600,
-        "height": 400
+        "name": "Mana Pools National Park",
+        "address": "Mana Pools, Zimbabwe",
+        "phone": "+263 242 706 077",
+        "website": "https://www.zimparks.org.zw",
+        "image": "chamber/images/mana_pools.webp",
+        "membership": "silver"
     },
     {
-        "name": "Zimbabwe Museum of Human Sciences",
-        "address": "Ridgeway Ave, Harare",
-        "description": "Museum displaying archaeological and anthropological exhibits about Zimbabwe’s heritage.",
-        "image": "images/museum.webp",
-        "alt": "Zimbabwe Museum of Human Sciences",
-        "width": 600,
-        "height": 400
+        "name": "Great Zimbabwe Monuments",
+        "address": "Masvingo, Zimbabwe",
+        "phone": "+263 392 626 20",
+        "website": "https://www.nmmz.co.zw",
+        "image": "chamber/images/great_zimbabwe.webp",
+        "membership": "member"
     },
     {
-        "name": "Nature Trail",
-        "address": "Harare outskirts",
-        "description": "A peaceful trail perfect for walking and enjoying indigenous birds and plants.",
-        "image": "images/nature_trail.webp",
-        "alt": "Nature Trail",
-        "width": 600,
-        "height": 400
-    },
-    {
-        "name": "African Fish Eagle Sanctuary",
-        "address": "Lake Chivero, near Harare",
-        "description": "Sanctuary known for the iconic African Fish Eagle, Zimbabwe’s national bird.",
-        "image": "images/african_fish_eagle.webp",
-        "alt": "African Fish Eagle Sanctuary",
-        "width": 600,
-        "height": 400
+        "name": "African Fish Eagle",
+        "address": "Zimbabwe",
+        "phone": "+263 000 000 000",
+        "website": "https://www.birdlife.org",
+        "image": "chamber/images/african_fish_eagle.webp",
+        "membership": "gold"
     }
 ]

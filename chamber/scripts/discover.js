@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const galleryContainer = document.getElementById("gallery-container");
     const visitMessage = document.getElementById("visit-message-text");
 
-    // Fetch the JSON data
-    fetch('data/interest.json')
+    // ✅ Updated fetch path — now looks in chamber/ folder
+    fetch('interest.json')
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Fetch error:', err);
         });
 
-    // Display last visit message
+    // 🕓 Display last visit message
     const lastVisit = localStorage.getItem("lastVisit");
     const now = Date.now();
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("lastVisit", now);
 
-    // Footer year and last modified
+    // 📅 Footer year and last modified
     const yearElem = document.getElementById("year");
     if (yearElem) yearElem.textContent = new Date().getFullYear();
 

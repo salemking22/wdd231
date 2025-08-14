@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Container Gardening",
+        "description": "Grow plants in small containers to save space.",
+        "image": "images/container.jpg"
+    },
+    {
+        "title": "Composting",
+        "description": "Turn kitchen scraps into nutrient-rich soil for your plants.",
+        "image": "images/compost.jpg"
+    },
+    {
+        "title": "Water-Saving Techniques",
+        "description": "Use drip irrigation and collect rainwater to reduce water usage.",
+        "image": "images/rainwater.jpg"
+    }
+]

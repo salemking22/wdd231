@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Thank You for Your Submission!</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Submitted Details</h2>
+            <p><strong>First Name:</strong> <span id="first-name"></span></p>
+            <p><strong>Last Name:</strong> <span id="last-name"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Message:</strong> <span id="message"></span></p>
+        </section>
+        <p><a href="index.html">Back to Home</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eco-Friendly Urban Gardening</p>
+    </footer>
+
+    <script>
+        // Parse query parameters from form submission
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById('first-name').textContent = params.get('first-name') || '';
+        document.getElementById('last-name').textContent = params.get('last-name') || '';
+        document.getElementById('email').textContent = params.get('email') || '';
+        document.getElementById('message').textContent = params.get('message') || '';
+    </script>
+</body>
+
+</html>

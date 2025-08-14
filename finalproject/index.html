@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eco-Friendly Urban Gardening</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn eco-friendly urban gardening techniques and tips for city living.">
+    <meta name="author" content="Cynthia Moyo">
+
+    <!-- Favicon for all browsers -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Eco-Friendly Urban Gardening">
+    <meta property="og:description" content="Learn eco-friendly urban gardening techniques and tips for city living.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salemking22.github.io/finalproject/index.html">
+    <meta property="og:image" content="images/og-image.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Eco-Friendly Urban Gardening</h1>
+        <!-- Navigation -->
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>This website promotes sustainable urban gardening practices for city residents. It provides:</p>
+            <ul>
+                <li>Home page introducing the benefits of urban gardening and eco-friendly practices.</li>
+                <li>Resources page with tips on container gardening, composting, and water-saving techniques.</li>
+                <li>Dynamic blog page that loads the latest gardening news and articles with filtering options.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <ul>
+                <li>How can I start an urban garden with limited space?</li>
+                <li>What eco-friendly techniques can help save water while gardening in the city?</li>
+            </ul>
+        </section>
+
+        <section id="tips">
+            <h2>Featured Tips</h2>
+            <div id="tips-container">
+                <!-- Tips will be dynamically loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="form-action.html" method="get">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" autocomplete="off" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eco-Friendly Urban Gardening</p>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="tip-modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="close">&times;</span>
+            <h3 id="modal-title">Tip Title</h3>
+            <img id="modal-image" src="images/placeholder.jpg" alt="Tip Image">
+            <p id="modal-description">Tip description will appear here.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/main.js"></script>
+    <script>
+        // Responsive navigation toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
